@@ -13,8 +13,8 @@ export default function GamePage() {
         <p className="eyebrow">Battle Arena</p>
         <h1>Optimus Prime vs. Megatron</h1>
         <p>
-          Turn-based duel. Strike with the Energon Blade, brace to repair, or
-          charge the Matrix Blast. Reduce Megatron to 0 HP to win.
+          Real-time 2D combat. Move and jump around the arena, slash with the
+          energon blade, and fire energon blasts to take Megatron down.
         </p>
         <p className="back-link">
           <Link href="/">← Back to home</Link>
