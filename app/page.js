@@ -44,23 +44,11 @@ function StatBar({ label, value }) {
 }
 
 export default function Home() {
-  const startedAt = Date.now();
   const renderedAt = new Date().toUTCString();
 
   // ---- Runtime Logs (emitted from the SSR compute on every request) ----
-  log.info("home.render.start", { dynamic: true });
-  log.debug("home.render.data", {
-    characters: CHARACTERS.length,
-    quotes: QUOTES.length,
-    renderedAt,
-  });
-
-  // Demonstrate a non-error warning path for the runtime log demo.
-  if (new Date().getUTCHours() >= 0) {
-    log.debug("home.render.note", { msg: "force-dynamic: no edge cache, origin invoked" });
-  }
-
-  log.info("home.render.complete", { renderMs: Date.now() - startedAt });
+  log.info();
+  log.debug();
 
   return (
     <>
