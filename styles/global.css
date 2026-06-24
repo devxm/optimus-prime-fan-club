@@ -1,0 +1,155 @@
+:root {
+  --autobot-red: #c1121f;
+  --autobot-blue: #1d3a8a;
+  --decepticon-purple: #6a2c91;
+  --steel: #5a6473;
+  --dark: #0c1018;
+  --light: #e8ecf3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  background: radial-gradient(circle at 50% 0%, #1a2030 0%, var(--dark) 70%);
+  color: var(--light);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: linear-gradient(180deg, rgba(29, 58, 138, 0.35), transparent);
+  border-bottom: 2px solid var(--autobot-red);
+}
+
+header h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--autobot-red), #ff5a5a, var(--autobot-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(193, 18, 31, 0.3);
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #9fb0cc;
+  font-size: 1.1rem;
+}
+
+/* ---------- Battle Scene ---------- */
+.scene {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.scene-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.6));
+  border-radius: 12px;
+  background: linear-gradient(180deg, #15233f 0%, #0a0d14 100%);
+}
+
+.caption {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: #c5d0e6;
+}
+
+/* ---------- Content ---------- */
+main {
+  max-width: 850px;
+  margin: 0 auto 4rem;
+  padding: 0 1.25rem;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--autobot-red);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+
+section h2 {
+  color: #ff6b6b;
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+}
+
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-align: center;
+  color: #ffd27d;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.quote span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #9fb0cc;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat {
+  text-align: center;
+  background: rgba(29, 58, 138, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.stat .num {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.stat .label {
+  font-size: 0.85rem;
+  color: #9fb0cc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ssr-badge {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #7a869c;
+}
+
+.ssr-badge code {
+  color: #7fd4ff;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #7a869c;
+  font-size: 0.9rem;
+}
