@@ -66,8 +66,8 @@ export default function Home() {
             <Link href="/signup" className="btn btn-primary">
               Join the Fan Club
             </Link>
-            <Link href="#battle" className="btn btn-ghost">
-              Witness the Battle
+            <Link href="/game" className="btn btn-ghost">
+              ⚔️ Play the Battle Game
             </Link>
           </div>
           <ul className="hero-badges">

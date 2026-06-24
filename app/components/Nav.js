@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const TABS = [
   { href: "/", label: "Home" },
   { href: "/#characters", label: "Characters" },
-  { href: "/#battle", label: "The Battle" },
+  { href: "/game", label: "Battle Arena" },
   { href: "/signup", label: "Sign Up Here", cta: true },
 ];
 
@@ -23,7 +23,8 @@ export default function Nav() {
         {TABS.map((tab) => {
           const active =
             (tab.href === "/" && pathname === "/") ||
-            (tab.href === "/signup" && pathname === "/signup");
+            (tab.href === "/signup" && pathname === "/signup") ||
+            (tab.href === "/game" && pathname === "/game");
           const cls = [
             "nav-tab",
             tab.cta ? "nav-cta" : "",
