@@ -48,6 +48,7 @@ export default function Home() {
 
   // ---- Runtime Logs (emitted from the SSR compute on every request) ----
   log.info();
+  log.burst(8);
   log.debug();
 
   return (

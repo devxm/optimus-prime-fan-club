@@ -1,12 +1,18 @@
 import Link from "next/link";
 import Game from "./Game";
+import { log } from "../lib/logger";
+
+// Server-render per request so each visit emits Runtime Logs from the compute.
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Battle Arena • Optimus Prime Fan Club",
-  description: "Take control of Optimus Prime in a turn-based duel against Megatron.",
+  description: "Take control of Optimus Prime in a real-time duel against Megatron.",
 };
 
 export default function GamePage() {
+  log.info("A challenger enters the Battle Arena.");
+  log.burst(5);
   return (
     <section className="game-page">
       <div className="section-head">

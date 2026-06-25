@@ -1,5 +1,9 @@
 import Link from "next/link";
 import SignupForm from "./SignupForm";
+import { log } from "../lib/logger";
+
+// Server-render per request so each visit emits Runtime Logs from the compute.
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Sign Up • Optimus Prime Fan Club",
@@ -7,6 +11,9 @@ export const metadata = {
 };
 
 export default function SignupPage() {
+  log.info("A visitor is checking out the sign-up page.");
+  log.burst(4);
+
   return (
     <section className="signup-page">
       <div className="signup-hero">
